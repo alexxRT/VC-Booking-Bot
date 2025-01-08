@@ -1,0 +1,7 @@
+telebot
+apscheduler
+configparser
+datetime
+re
+logging
+sqlite3
