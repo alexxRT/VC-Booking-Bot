@@ -50,7 +50,7 @@ class Bot:
             return
 
          # some users might not have usernames, but admins should have conntacts with them anyway
-        if not message.from_user.username.strip():
+        if message.from_user.username is None:
             self.bot.send_message(message.from_user.id, "Please create username in settings and return!")
             self.bot.register_next_step_handler(message, self.on_register)
             log.warning("User does not have @username on_register")
